@@ -61,7 +61,8 @@ class Main:
                 print("자릿수가 맞지 않음")
                 return False
             elif self.isDuplicateNumber(number):
-                print()
+                print("중복된 숫자가 있음")
+                return False
             else:
                 return number
         except:
@@ -81,9 +82,9 @@ class Main:
                     break
             result = self.check(numbers)
             if result["ball"] == 0:
-                print("노 볼 ")
+                print("노 볼 ", end="")
             else:
-                print("%d 볼 " % result["ball"])
+                print("%d 볼 " % result["ball"], end="")
             if result["strike"] == 0:
                 print("노 스트라이크")
             else:
