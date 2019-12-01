@@ -15,19 +15,16 @@ class Main:
             except:
                 print("숫자가 아닙니다.")
                 continue
-            if int(temp) <= 0:
+            temp = int(temp)
+            if temp <= 0:
                 print("0 이하는 불가능합니다.")
                 continue
-            if int(temp) >= 10:
+            if temp >= 10:
                 print("10 이상은 불가능합니다.")
                 continue
-            self.count = int(temp)
+            self.count = temp
+            self.fillNumbersInList(self.nums, self.count, 1, 9)
             break
-        while len(self.nums) < self.count:
-            n = random.randint(1, 9)
-            if n in self.nums:
-                continue
-            self.nums.append(n)
         # print(self.nums) # on When Debugging
 
     def run(self):
@@ -87,6 +84,13 @@ class Main:
             print("중복된 숫자가 있음")
             return False
         return number
+
+    def fillNumbersInList(self, list, count, min, max):
+        while len(list) < count:
+            n = random.randint(min, max)
+            if n in list:
+                continue
+            list.append(n)
 
     def isWin(self):
         return self.win
