@@ -14,7 +14,7 @@ class Main:
                 if int(temp) <= 0:
                     print("0 이하는 불가능합니다.")
                     continue
-                if int(temp) > 9:
+                if int(temp) >= 10:
                     print("10 이상은 불가능합니다.")
                     continue
                 self.count = int(temp)
