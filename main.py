@@ -11,6 +11,9 @@ class Main:
         while True:
             temp = input("숫자 몇개로 하시겠습니까? ")
             try:
+                if int(temp) <= 0:
+                    print("0 이하는 불가능합니다.")
+                    continue
                 if int(temp) > 9:
                     print("10 이상은 불가능합니다.")
                     continue
