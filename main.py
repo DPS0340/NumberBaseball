@@ -32,7 +32,6 @@ class Main:
         print("규칙: 1~9까지의 자연수 n개를 맞추는 게임")
         print("숫자야구 시작")
         self.loop()
-        print("이겼습니다!")
 
     def loop(self):
         while not self.isWin():
@@ -96,6 +95,7 @@ class Main:
         return self.win
 
     def gameWin(self):
+        print("이겼습니다!")
         self.win = True
 
     def printResult(self, result):
