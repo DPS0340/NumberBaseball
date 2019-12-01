@@ -25,7 +25,7 @@ class Main:
                 continue
             else:
                 self.nums.append(n)
-        print(self.nums) # 디버깅 모드
+        # print(self.nums) # 디버깅 모드
 
     def check(self, numbers):
         numList = list(map(int, list(str(numbers))))
