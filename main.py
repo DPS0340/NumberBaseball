@@ -10,9 +10,7 @@ class Main:
         self.nums.clear()
         while True:
             temp = input("숫자 몇개로 하시겠습니까? ")
-            try:
-                int(temp)
-            except:
+            if not self.isNumber(temp):
                 print("숫자가 아닙니다.")
                 continue
             temp = int(temp)
